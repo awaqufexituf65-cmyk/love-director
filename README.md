@@ -131,5 +131,11 @@ MIT License
 
 ---
 
+## 作者
+
+**EnV** — awaqufexituf65@gmail.com
+
+---
+
 *Love Director 不能告诉你幸福的方向，但它可以让你看见选择。*
 *你是你自己的导演。*
