@@ -12,7 +12,7 @@
 
 ## 这是什么？
 
-Love Director 是一个**恋爱观观测与导演系统**。
+Love Director 是一个**恋爱观观测与导演系统**。关于目前的中国恋爱大环境为主的工具
 
 不是恋爱顾问（不教你"怎么追人"），不是反诈工具（那个在 [emotional-fraud-detector](https://github.com/awaqufexituf65-cmyk/emotional-fraud-detector)），不是心理治疗师（不诊断不治疗）。
 
