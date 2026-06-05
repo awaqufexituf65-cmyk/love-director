@@ -1,0 +1,294 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1020">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/>
+    </marker>
+    <marker id="arrow-violet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-slate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    text { font-family: 'JetBrains Mono', 'Noto Sans SC', 'PingFang SC', monospace; }
+    .layer-label { fill: #94a3b8; font-size: 10px; font-weight: 500; }
+    .box-title { fill: #e2e8f0; font-size: 11px; font-weight: 600; }
+    .box-sub { fill: #94a3b8; font-size: 8.5px; }
+    .flow-text { fill: #22d3ee; font-size: 9px; font-weight: 600; }
+    .title-text { fill: #f1f5f9; font-size: 18px; font-weight: 700; }
+    .subtitle-text { fill: #a78bfa; font-size: 11px; font-weight: 500; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="1020" fill="#0f172a"/>
+  <rect width="1200" height="1020" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="600" y="36" class="title-text" text-anchor="middle">Love Director 💕🎬 — 恋爱观观测与导演系统 软件架构</text>
+  <text x="600" y="56" class="subtitle-text" text-anchor="middle">五层架构 · 5-Phase 工作流 · 外部工具联动 · 多平台兼容</text>
+
+  <!-- ===== LAYER 1: 展示层 (y=80-170) ===== -->
+  <rect x="20" y="80" width="900" height="90" rx="10" fill="none" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4" opacity="0.6"/>
+  <text x="32" y="98" class="layer-label">展示层 Presentation</text>
+
+  <rect x="36" y="108" width="190" height="46" rx="6" fill="#0f172a"/>
+  <rect x="36" y="108" width="190" height="46" rx="6" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="131" y="128" class="box-title" text-anchor="middle">💻 CLI 终端</text>
+  <text x="131" y="144" class="box-sub" text-anchor="middle">Python + Rich/Textual</text>
+
+  <rect x="248" y="108" width="190" height="46" rx="6" fill="#0f172a"/>
+  <rect x="248" y="108" width="190" height="46" rx="6" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="343" y="128" class="box-title" text-anchor="middle">🌐 Web App</text>
+  <text x="343" y="144" class="box-sub" text-anchor="middle">Next.js + FastAPI</text>
+
+  <rect x="460" y="108" width="190" height="46" rx="6" fill="#0f172a"/>
+  <rect x="460" y="108" width="190" height="46" rx="6" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="555" y="128" class="box-title" text-anchor="middle">🖥 Desktop App</text>
+  <text x="555" y="144" class="box-sub" text-anchor="middle">Tauri (Rust+React)</text>
+
+  <rect x="672" y="108" width="190" height="46" rx="6" fill="#0f172a"/>
+  <rect x="672" y="108" width="190" height="46" rx="6" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="767" y="128" class="box-title" text-anchor="middle">🔌 IDE Plugin</text>
+  <text x="767" y="144" class="box-sub" text-anchor="middle">VS Code / Claude Code</text>
+
+  <!-- Arrow L1→L2 -->
+  <path d="M 470 170 L 470 195" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)" opacity="0.5"/>
+
+  <!-- ===== LAYER 2: 编排层 (y=200-320) ===== -->
+  <rect x="20" y="200" width="900" height="120" rx="10" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="8,4" opacity="0.6"/>
+  <text x="32" y="218" class="layer-label">编排层 Orchestration — Love Director Engine</text>
+
+  <rect x="36" y="232" width="340" height="70" rx="6" fill="#0f172a"/>
+  <rect x="36" y="232" width="340" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="206" y="254" class="box-title" text-anchor="middle">⚙️ Phase 管理器</text>
+  <text x="206" y="272" class="box-sub" text-anchor="middle">0 → 1A → 1B → 1C → 2 → 3 → 4 → 5</text>
+  <text x="206" y="288" class="box-sub" text-anchor="middle">状态机 · 数据完整度检查 · 自动推进</text>
+
+  <rect x="400" y="232" width="240" height="70" rx="6" fill="#0f172a"/>
+  <rect x="400" y="232" width="240" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="520" y="254" class="box-title" text-anchor="middle">🌳 决策树生成器 ★</text>
+  <text x="520" y="272" class="box-sub" text-anchor="middle">变量提取 → 分支构建</text>
+  <text x="520" y="288" class="box-sub" text-anchor="middle">概率赋值 → 结局演绎</text>
+
+  <rect x="664" y="232" width="210" height="70" rx="6" fill="#0f172a"/>
+  <rect x="664" y="232" width="210" height="70" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="769" y="254" class="box-title" text-anchor="middle">🎬 导演引擎</text>
+  <text x="769" y="272" class="box-sub" text-anchor="middle">6种结局类型</text>
+  <text x="769" y="288" class="box-sub" text-anchor="middle">故事演绎闭环</text>
+
+  <!-- Arrow L2→L3 -->
+  <path d="M 470 320 L 470 345" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-violet)" opacity="0.5"/>
+
+  <!-- ===== LAYER 3: 分析层 (y=350-460) ===== -->
+  <rect x="20" y="350" width="900" height="110" rx="10" fill="none" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4" opacity="0.6"/>
+  <text x="32" y="368" class="layer-label">分析层 Analytics</text>
+
+  <rect x="36" y="380" width="270" height="62" rx="6" fill="#0f172a"/>
+  <rect x="36" y="380" width="270" height="62" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="171" y="402" class="box-title" text-anchor="middle">📊 聊天分析引擎</text>
+  <text x="171" y="420" class="box-sub" text-anchor="middle">情感评分(SnowNLP) · 冲突检测</text>
+  <text x="171" y="434" class="box-sub" text-anchor="middle">话题分布 · 关系阶段推断</text>
+
+  <rect x="330" y="380" width="270" height="62" rx="6" fill="#0f172a"/>
+  <rect x="330" y="380" width="270" height="62" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="465" y="402" class="box-title" text-anchor="middle">🧬 画像计算引擎</text>
+  <text x="465" y="420" class="box-sub" text-anchor="middle">自述-行为差距分析</text>
+  <text x="465" y="434" class="box-sub" text-anchor="middle">7维恋爱哲学评分</text>
+
+  <rect x="624" y="380" width="250" height="62" rx="6" fill="#0f172a"/>
+  <rect x="624" y="380" width="250" height="62" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="749" y="402" class="box-title" text-anchor="middle">🎲 概率引擎</text>
+  <text x="749" y="420" class="box-sub" text-anchor="middle">行为稳定性 × 全国统计</text>
+  <text x="749" y="434" class="box-sub" text-anchor="middle">贝叶斯条件概率计算</text>
+
+  <!-- Arrow L3→L4 -->
+  <path d="M 470 460 L 470 485" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)" opacity="0.5"/>
+
+  <!-- ===== LAYER 4: 数据层 (y=490-600) ===== -->
+  <rect x="20" y="490" width="900" height="110" rx="10" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4" opacity="0.6"/>
+  <text x="32" y="508" class="layer-label">数据层 Data — 隐私优先 · 默认加密 · 用户可控</text>
+
+  <rect x="36" y="522" width="200" height="60" rx="6" fill="#0f172a"/>
+  <rect x="36" y="522" width="200" height="60" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="136" y="544" class="box-title" text-anchor="middle">👤 用户画像存储</text>
+  <text x="136" y="562" class="box-sub" text-anchor="middle">加密 · 用户控制</text>
+  <text x="136" y="576" class="box-sub" text-anchor="middle">24h自动清除(默认)</text>
+
+  <rect x="258" y="522" width="200" height="60" rx="6" fill="#0f172a"/>
+  <rect x="258" y="522" width="200" height="60" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="358" y="544" class="box-title" text-anchor="middle">💬 聊天记录缓存</text>
+  <text x="358" y="562" class="box-sub" text-anchor="middle">仅分析期间缓存</text>
+  <text x="358" y="576" class="box-sub" text-anchor="middle">不长期存储</text>
+
+  <rect x="480" y="522" width="200" height="60" rx="6" fill="#0f172a"/>
+  <rect x="480" y="522" width="200" height="60" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="580" y="544" class="box-title" text-anchor="middle">📚 知识库</text>
+  <text x="580" y="562" class="box-sub" text-anchor="middle">恋爱观数据 · 诈骗模式</text>
+  <text x="580" y="576" class="box-sub" text-anchor="middle">研究引用 · 版本管理</text>
+
+  <rect x="702" y="522" width="180" height="60" rx="6" fill="#0f172a"/>
+  <rect x="702" y="522" width="180" height="60" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="792" y="544" class="box-title" text-anchor="middle">📈 统计数据库</text>
+  <text x="792" y="562" class="box-sub" text-anchor="middle">14来源全国数据</text>
+  <text x="792" y="576" class="box-sub" text-anchor="middle">SQLite/JSON</text>
+
+  <!-- Arrow L4→L5 -->
+  <path d="M 470 600 L 470 625" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)" opacity="0.5"/>
+
+  <!-- ===== LAYER 5: 集成层 (y=630-750) ===== -->
+  <rect x="20" y="630" width="900" height="120" rx="10" fill="none" stroke="#fb923c" stroke-width="1" stroke-dasharray="8,4" opacity="0.6"/>
+  <text x="32" y="648" class="layer-label">集成层 Integration — 插件系统</text>
+
+  <rect x="36" y="660" width="270" height="72" rx="6" fill="#0f172a"/>
+  <rect x="36" y="660" width="270" height="72" rx="6" fill="rgba(251,146,60,0.2)" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="171" y="682" class="box-title" text-anchor="middle">📥 数据导入插件</text>
+  <text x="171" y="700" class="box-sub" text-anchor="middle">WeFlow · wechat_analysis</text>
+  <text x="171" y="716" class="box-sub" text-anchor="middle">wechat-insight · 手动粘贴</text>
+
+  <rect x="330" y="660" width="270" height="72" rx="6" fill="#0f172a"/>
+  <rect x="330" y="660" width="270" height="72" rx="6" fill="rgba(251,146,60,0.2)" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="465" y="682" class="box-title" text-anchor="middle">🤖 AI 后端适配器</text>
+  <text x="465" y="700" class="box-sub" text-anchor="middle">Claude API · OpenAI GPT</text>
+  <text x="465" y="716" class="box-sub" text-anchor="middle">Gemini · Ollama (本地)</text>
+
+  <rect x="624" y="660" width="250" height="72" rx="6" fill="#0f172a"/>
+  <rect x="624" y="660" width="250" height="72" rx="6" fill="rgba(251,146,60,0.2)" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="749" y="682" class="box-title" text-anchor="middle">🧠 心理模型插件</text>
+  <text x="749" y="700" class="box-sub" text-anchor="middle">Lila (依恋风格+大五)</text>
+  <text x="749" y="716" class="box-sub" text-anchor="middle">MBTI · 自定义评估</text>
+
+  <!-- ===== RIGHT SIDE: Data Flow Pipeline ===== -->
+  <!-- Vertical pipe: x=960 to x=1180 -->
+  <rect x="940" y="80" width="240" height="670" rx="10" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  <text x="1060" y="100" class="layer-label" text-anchor="middle">工作流 (5-Phase Pipeline)</text>
+
+  <!-- Phase nodes -->
+  <g>
+    <rect x="960" y="115" width="200" height="28" rx="4" fill="rgba(30,41,59,0.6)" stroke="#94a3b8" stroke-width="1"/>
+    <text x="970" y="133" fill="#e2e8f0" font-size="9" font-weight="500">👤 用户输入</text>
+  </g>
+  <path d="M 1060 143 L 1060 158" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-slate)"/>
+
+  <g>
+    <rect x="960" y="160" width="200" height="28" rx="4" fill="rgba(30,41,59,0.6)" stroke="#94a3b8" stroke-width="1"/>
+    <text x="970" y="178" fill="#e2e8f0" font-size="9" font-weight="500">🛡️ Phase 0: 安全声明</text>
+  </g>
+  <path d="M 1060 188 L 1060 203" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-slate)"/>
+
+  <g>
+    <rect x="960" y="205" width="200" height="38" rx="4" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1"/>
+    <text x="970" y="220" fill="#22d3ee" font-size="9" font-weight="600">📋 Phase 1A: 自述层</text>
+    <text x="970" y="234" fill="#94a3b8" font-size="7.5">年龄/家庭/成长/经历/诉求</text>
+  </g>
+  <path d="M 1060 243 L 1060 258" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <g>
+    <rect x="960" y="260" width="200" height="28" rx="4" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1"/>
+    <text x="970" y="278" fill="#22d3ee" font-size="9" font-weight="600">💾 Phase 1B: WeFlow 导出</text>
+  </g>
+  <path d="M 1060 288 L 1060 303" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <g>
+    <rect x="960" y="305" width="200" height="28" rx="4" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1"/>
+    <text x="970" y="323" fill="#22d3ee" font-size="9" font-weight="600">🔍 Phase 1C: 差距分析</text>
+  </g>
+  <path d="M 1060 333 L 1060 348" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <g>
+    <rect x="960" y="350" width="200" height="38" rx="4" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/>
+    <text x="970" y="365" fill="#a78bfa" font-size="9" font-weight="600">💭 Phase 2: 7维探针</text>
+    <text x="970" y="379" fill="#94a3b8" font-size="7.5">+ Lila 依恋风格评估</text>
+  </g>
+  <path d="M 1060 388 L 1060 403" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+
+  <g>
+    <rect x="960" y="405" width="200" height="28" rx="4" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/>
+    <text x="970" y="423" fill="#a78bfa" font-size="9" font-weight="600">📊 Phase 3: 行为观测</text>
+  </g>
+  <path d="M 1060 433 L 1060 448" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-violet)"/>
+
+  <g>
+    <rect x="960" y="450" width="200" height="44" rx="4" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="970" y="466" fill="#34d399" font-size="9" font-weight="700">🌳 Phase 4: 决策树 ★</text>
+    <text x="970" y="482" fill="#94a3b8" font-size="7.5">概率化多走向剧本演绎</text>
+  </g>
+  <path d="M 1060 494 L 1060 509" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+
+  <g>
+    <rect x="960" y="511" width="200" height="28" rx="4" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/>
+    <text x="970" y="529" fill="#34d399" font-size="9" font-weight="600">🎥 Phase 5: 导演视角</text>
+  </g>
+
+  <!-- ===== BOTTOM: External Tools (y=770-890) ===== -->
+  <rect x="20" y="770" width="1160" height="110" rx="10" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+  <text x="40" y="790" class="layer-label">🔗 外部工具联动</text>
+
+  <!-- P0 -->
+  <rect x="36" y="800" width="240" height="60" rx="6" fill="#0f172a"/>
+  <rect x="36" y="800" width="240" height="60" rx="6" fill="rgba(136,19,55,0.3)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="156" y="820" fill="#fb7185" font-size="10" font-weight="700" text-anchor="middle">🔴 P0 数据管道</text>
+  <text x="156" y="838" class="box-sub" text-anchor="middle">WeFlow · wechat_analysis</text>
+  <text x="156" y="852" class="box-sub" text-anchor="middle">强烈建议安装</text>
+
+  <!-- P1 -->
+  <rect x="296" y="800" width="240" height="60" rx="6" fill="#0f172a"/>
+  <rect x="296" y="800" width="240" height="60" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="416" y="820" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="middle">🟠 P1 深度模型</text>
+  <text x="416" y="838" class="box-sub" text-anchor="middle">Lila MCP · ex-skill</text>
+  <text x="416" y="852" class="box-sub" text-anchor="middle">推荐安装</text>
+
+  <!-- P2 -->
+  <rect x="556" y="800" width="310" height="60" rx="6" fill="#0f172a"/>
+  <rect x="556" y="800" width="310" height="60" rx="6" fill="rgba(59,130,246,0.2)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="711" y="820" fill="#60a5fa" font-size="10" font-weight="700" text-anchor="middle">🟡 P2 增强层</text>
+  <text x="711" y="838" class="box-sub" text-anchor="middle">FriendScope · wechat-insight · mbti-mcp</text>
+  <text x="711" y="852" class="box-sub" text-anchor="middle">可选进阶</text>
+
+  <!-- P3 -->
+  <rect x="886" y="800" width="270" height="60" rx="6" fill="#0f172a"/>
+  <rect x="886" y="800" width="270" height="60" rx="6" fill="rgba(30,41,59,0.4)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="1021" y="820" fill="#94a3b8" font-size="10" font-weight="700" text-anchor="middle">⚪ P3 探索层</text>
+  <text x="1021" y="838" class="box-sub" text-anchor="middle">Soul Matrix AI · agora · yourself-skill</text>
+  <text x="1021" y="852" class="box-sub" text-anchor="middle">前沿探索</text>
+
+  <!-- ===== BOTTOM: Evolution Path (y=900) ===== -->
+  <rect x="320" y="895" width="560" height="40" rx="8" fill="rgba(76,29,149,0.2)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="380" y="920" fill="#a78bfa" font-size="11" font-weight="700">v1.0 Skill</text>
+  <text x="500" y="920" fill="#94a3b8" font-size="11">→</text>
+  <text x="535" y="920" fill="#a78bfa" font-size="11" font-weight="700">v2.0 API 化</text>
+  <text x="665" y="920" fill="#94a3b8" font-size="11">→</text>
+  <text x="700" y="920" fill="#a78bfa" font-size="11" font-weight="700">v3.0 完整软件</text>
+  <text x="820" y="920" fill="#94a3b8" font-size="9">(SKILL.md → Python Core → Web/Desktop App)</text>
+
+  <!-- Bottom line -->
+  <text x="600" y="980" fill="#475569" font-size="8" text-anchor="middle">Open Source · MIT License · Cross-Platform (Claude Code / Codex / Cursor / OpenClaw / Gemini CLI) · github.com/awaqufexituf65-cmyk/love-director</text>
+
+  <!-- Legend -->
+  <rect x="36" y="955" width="16" height="12" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/>
+  <text x="56" y="965" fill="#94a3b8" font-size="8">引擎</text>
+  <rect x="100" y="955" width="16" height="12" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="120" y="965" fill="#94a3b8" font-size="8">编排</text>
+  <rect x="164" y="955" width="16" height="12" rx="2" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1"/>
+  <text x="184" y="965" fill="#94a3b8" font-size="8">展示</text>
+  <rect x="228" y="955" width="16" height="12" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+  <text x="248" y="965" fill="#94a3b8" font-size="8">数据</text>
+  <rect x="292" y="955" width="16" height="12" rx="2" fill="rgba(251,146,60,0.2)" stroke="#fb923c" stroke-width="1"/>
+  <text x="312" y="965" fill="#94a3b8" font-size="8">集成</text>
+  <rect x="356" y="955" width="16" height="12" rx="2" fill="rgba(136,19,55,0.3)" stroke="#fb7185" stroke-width="1"/>
+  <text x="376" y="965" fill="#94a3b8" font-size="8">P0工具</text>
+</svg>
