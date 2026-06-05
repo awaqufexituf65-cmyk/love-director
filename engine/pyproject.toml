@@ -1,0 +1,16 @@
+[project]
+name = "love-director-engine"
+version = "0.1.0"
+description = "Love Director — 恋爱观观测与导演系统 Python 计算引擎"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "EnV", email = "awaqufexituf65@gmail.com"}
+]
+
+[project.scripts]
+love-director = "engine.cli:main"
+
+[project.optional-dependencies]
+nlp = ["snownlp>=0.12.3", "jieba>=0.42.1"]
+full = ["snownlp>=0.12.3", "jieba>=0.42.1", "numpy>=1.24"]
