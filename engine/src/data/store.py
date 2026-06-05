@@ -56,12 +56,20 @@ class DataStore:
             s.philosophy = philosophy
             s.current_phase = "phase_2"
 
+    def get_philosophy(self, session_id: str) -> dict:
+        s = self._sessions.get(session_id)
+        return s.philosophy if s else {}
+
     # ---- Behavior report ----
     def save_behavior(self, session_id: str, behavior: dict) -> None:
         s = self._sessions.get(session_id)
         if s:
             s.behavior = behavior
             s.current_phase = "phase_3"
+
+    def get_behavior(self, session_id: str) -> dict:
+        s = self._sessions.get(session_id)
+        return s.behavior if s else {}
 
     # ---- Decision tree ----
     def save_decision_tree(self, session_id: str, tree: dict) -> None:

@@ -50,9 +50,9 @@ class ChatAnalyzer:
         except ImportError:
             pass
 
-    def analyze_text(self, text: str) -> ChatAnalysisResult:
+    def analyze_text(self, text: str, user_name: str = "我") -> ChatAnalysisResult:
         """Analyze raw chat text (WeFlow TXT export format)."""
-        messages = self._parse_messages(text)
+        messages = self._parse_messages(text, user_name)
         if not messages:
             return self._empty_result()
 
@@ -92,7 +92,7 @@ class ChatAnalyzer:
         return merged
 
     # ---- Parsing ----
-    def _parse_messages(self, text: str) -> list[dict]:
+    def _parse_messages(self, text: str, user_name: str = "我") -> list[dict]:
         """Parse WeFlow TXT format: 'YYYY-MM-DD HH:MM:SS Name: content'"""
         messages = []
         pattern = r'(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})\s+([^:]+):\s+(.+)'
@@ -105,6 +105,7 @@ class ChatAnalyzer:
                     "timestamp": timestamp.strip(),
                     "sender": sender.strip(),
                     "content": content.strip(),
+                    "is_user": sender.strip() == user_name,
                 })
 
         return messages
