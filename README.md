@@ -1,4 +1,4 @@
-# Love Director 
+# Love Director .skill
 
 > "世界是畸形且残酷的，但是我希望追求真爱的人都能获得真正的幸福。"
 >
