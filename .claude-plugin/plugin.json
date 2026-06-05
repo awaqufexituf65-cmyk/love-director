@@ -1,0 +1,25 @@
+{
+  "name": "love-director",
+  "version": "1.0.0",
+  "description": "Love Director — 恋爱观观测与导演系统。不是教你恋爱，是让你看见自己的恋爱模式及其可能的未来走向。",
+  "author": {
+    "name": "EnV"
+  },
+  "homepage": "https://github.com/awaqufexituf65-cmyk/love-director",
+  "repository": "https://github.com/awaqufexituf65-cmyk/love-director",
+  "license": "MIT",
+  "keywords": [
+    "love",
+    "dating",
+    "relationship",
+    "psychology",
+    "decision-tree",
+    "self-awareness",
+    "chinese",
+    "恋爱",
+    "婚恋",
+    "导演",
+    "决策树",
+    "自我认知"
+  ]
+}
